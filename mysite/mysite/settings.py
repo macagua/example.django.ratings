@@ -44,6 +44,7 @@ THIRD_PARTY = [
 ]
 
 LOCAL_APPS = [
+    'destinations',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
