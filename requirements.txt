@@ -1,0 +1,2 @@
+django==3.0.5
+-e git+https://github.com/django-ve/django-star-ratings.git@master#egg=django-star-ratings
