@@ -1,0 +1,12 @@
+{% extends "destinations/base.html" %}
+{% load static i18n %}
+{% load ratings %}
+
+{% block content %}
+    <h1>{{ object.name }}</h1>
+    <h2>{{ object.short_description }}</h2>
+    <p>{{ object.description }}</p>
+    {% ratings object %}
+    <br><br>
+    <a href="/" title="{% trans 'Back to destination list' %}">{% trans 'Back to destination list' %}</a>
+{% endblock content %}

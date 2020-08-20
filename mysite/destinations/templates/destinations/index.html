@@ -1,0 +1,15 @@
+{% extends "destinations/base.html" %}
+{% load static i18n %}
+
+{% block content %}
+    {% if latest_destination_list %}
+        <h1>{% trans 'Destinations' %}</h1>
+        <ul>
+        {% for destination in latest_destination_list %}
+            <li><a href="/destinations/{{ destination.id }}/" title="{{ destination.name }}">{{ destination.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>{% trans 'No destinations are available.' %}</p>
+    {% endif %}
+{% endblock content %}

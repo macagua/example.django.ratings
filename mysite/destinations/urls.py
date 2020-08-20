@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import DestinationsView
+from . import views
 
 urlpatterns = [
-    path('', DestinationsView.as_view(template_name='destinations.html'), name='destinations'),
+    # ex: /destinations/
+    path('', views.IndexView.as_view(), name='index'),
+    # ex: /destinations/5/
+    path('destinations/<int:pk>/', views.DestinationDetailView.as_view(), name='detail'),
 ]
