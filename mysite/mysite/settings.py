@@ -44,7 +44,7 @@ THIRD_PARTY = [
 ]
 
 LOCAL_APPS = [
-    'destinations',
+    'destinations.apps.DestinationsConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
@@ -129,3 +129,31 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Django Star Ratings System
+# https://django-star-ratings.readthedocs.io/
+
+# To change the number of rating stars, defaults to 5
+STAR_RATINGS_RANGE = 5
+
+# To allow uses to delete a rating via a clear button, defaults to False
+STAR_RATINGS_CLEARABLE = False
+
+# To allow uses anonymus to do a rating, defaults to False
+STAR_RATINGS_ANONYMOUS = False
+
+# To prohibit users from altering their ratings set, defaults to True
+STAR_RATINGS_RERATE = True
+STAR_RATINGS_RERATE_SAME_DELETE = False
+
+# To change the star icon height, defaults to 32
+STAR_RATINGS_STAR_HEIGHT = 10
+
+# To set the same value from the star icon height to the star icon width, defaults the same STAR_RATINGS_STAR_HEIGHT
+STAR_RATINGS_STAR_WIDTH = STAR_RATINGS_STAR_HEIGHT
+
+# To change the star icon path, defaults to 'star-ratings/images/stars.png'
+STAR_RATINGS_STAR_SPRITE = 'star-ratings/images/stars.png'
+
+# To override the 'object_id' field on the 'Rating' model to a reasonable value for your new pk field, defaults to a digit
+STAR_RATINGS_OBJECT_ID_PATTERN = r'\d+'

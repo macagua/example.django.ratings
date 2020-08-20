@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% load ratings %}
+
+{% block content %}
+    <h1>{{ object.name }}</h1>
+
+    {% ratings object %}
+
+{% endblock content %}

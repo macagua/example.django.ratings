@@ -1,6 +1,6 @@
 from django.urls import path
-
-# Create your urls here.
+from .views import DestinationsView
 
 urlpatterns = [
+    path('', DestinationsView.as_view(template_name='destinations.html'), name='destinations'),
 ]

@@ -1,0 +1,21 @@
+{% load static i18n ratings %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Destinations demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- start star-ratings assets -->
+  <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+  <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+  <!-- end star-ratings assets -->
+</head>
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+{% block extrajs %}
+{% endblock extrajs %}
+</body>
+</html>
