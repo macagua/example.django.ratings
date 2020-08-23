@@ -65,7 +65,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(os.getcwd(), 'destinations/templates/'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -147,7 +149,7 @@ STAR_RATINGS_RERATE = True
 STAR_RATINGS_RERATE_SAME_DELETE = False
 
 # To change the star icon height, defaults to 32
-STAR_RATINGS_STAR_HEIGHT = 10
+STAR_RATINGS_STAR_HEIGHT = 12
 
 # To set the same value from the star icon height to the star icon width, defaults the same STAR_RATINGS_STAR_HEIGHT
 STAR_RATINGS_STAR_WIDTH = STAR_RATINGS_STAR_HEIGHT
